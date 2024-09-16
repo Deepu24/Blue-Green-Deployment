@@ -1,0 +1,13 @@
+plan :
+  stage: plan
+  script:
+  - terraform init
+  - terraform plan
+
+
+apply:
+  stage: apply
+  script:
+  - terraform apply tfplan
+  when: manual
+
